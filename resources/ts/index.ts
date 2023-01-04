@@ -1,4 +1,4 @@
-import './../js/bootstrap';
+import '@/js/bootstrap';
 
 const h1 = document.querySelector('h1');
 
