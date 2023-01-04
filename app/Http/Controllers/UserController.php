@@ -26,6 +26,16 @@ class UserController extends Controller
         return view('users.index');
     }
 
+    /**
+     * New user form.
+     *
+     * @return string
+     */
+    public function register(): string
+    {
+        return view('users.register');
+    }
+
     public function store(Request $request): RedirectResponse
     {
         $request->validate([

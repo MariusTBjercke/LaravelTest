@@ -18,12 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/test', function() {
-    return view('test', [
-        'name' => 'Kulgutt94',
-    ]);
-});
+// User routes
+Route::get('/users', [UserController::class, 'index']);
+Route::get('/users/profile/{name}', [UserController::class, 'profile']);
+Route::get('/users/register', [UserController::class, 'register']);
+Route::post('/users/register', [UserController::class, 'store']);
 
-Route::get('/users/{name}', [UserController::class, 'index']);
-Route::get('/users/new', [UserController::class, 'store']);
-Route::post('/users', [UserController::class, 'store']);

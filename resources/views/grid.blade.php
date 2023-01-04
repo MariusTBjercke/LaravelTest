@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>@yield('title')</title>
-    <meta name="description" content="@yield('description', 'Test')">
-    <meta name="author" content="@yield('author', 'Marius')">
+    <meta name="description" content="@yield('description')">
+    <meta name="author" content="@yield('author')">
 
-    <meta property="og:title" content="A Basic HTML5 Template">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.sitepoint.com/a-basic-html5-template/">
-    <meta property="og:description" content="A simple HTML5 Template for new projects.">
-    <meta property="og:image" content="image.png">
+    <meta property="og:title" content="@yield('ogTitle')">
+    <meta property="og:type" content="@yield('ogType')">
+    <meta property="og:url" content="@yield('ogUrl')">
+    <meta property="og:description" content="@yield('ogDescription')">
+    <meta property="og:image" content="@yield('ogImage')">
 
     <link rel="icon" href="{{ vite_asset('resources/img/icons/icons8-home.svg') }}">
 
@@ -23,6 +23,6 @@
 
 @yield('content')
 
-<script src="{{ vite_asset('resources/js/index.js') }}"></script>
+<script src="{{ vite_asset('resources/ts/index.ts') }}"></script>
 </body>
 </html>
