@@ -21,6 +21,6 @@ Route::get('/', function () {
 // User routes
 Route::get('/users', [UserController::class, 'index']);
 Route::get('/users/profile/{name}', [UserController::class, 'profile']);
-Route::get('/users/register', [UserController::class, 'register']);
-Route::post('/users/register', [UserController::class, 'store']);
+Route::get('/users/register', [UserController::class, 'register'])->name('users.register');
+Route::post('/users/register', [UserController::class, 'store'])->name('users.store');
 

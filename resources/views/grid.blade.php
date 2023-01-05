@@ -21,7 +21,9 @@
 
 <body>
 
-@yield('content')
+<article class="@yield('className')">
+    @yield('content')
+</article>
 
 <script src="{{ vite_asset('resources/ts/index.ts') }}"></script>
 </body>

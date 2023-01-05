@@ -9,6 +9,8 @@ use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Support\Facades\Log;
 
+use Illuminate\View\View;
+
 use function Psy\debug;
 
 class UserController extends Controller
@@ -29,9 +31,9 @@ class UserController extends Controller
     /**
      * New user form.
      *
-     * @return string
+     * @return View
      */
-    public function register(): string
+    public function register(): View
     {
         return view('users.register');
     }
