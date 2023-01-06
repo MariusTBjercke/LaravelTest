@@ -4,6 +4,20 @@
     }
 
     &__form {
-        background: red;
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+    }
+
+    &__input {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 0.25rem;
     }
 }
