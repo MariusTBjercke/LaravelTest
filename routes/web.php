@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VueController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,9 +19,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// User routes
+// User
 Route::get('/users', [UserController::class, 'index'])->name('users.index');
 Route::get('/users/profile/{name}', [UserController::class, 'profile'])->name('users.profile');
 Route::get('/users/register', [UserController::class, 'register'])->name('users.register');
 Route::post('/users/register', [UserController::class, 'store'])->name('users.store');
 
+// Vue
+Route::get('/vue', [VueController::class, 'index'])->name('vue.index');

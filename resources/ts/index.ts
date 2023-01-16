@@ -1,9 +1,6 @@
 import '@/js/bootstrap';
 
-const h1 = document.querySelector('h1');
+import { createApp } from 'vue';
+import App from '@/templates/App.vue';
 
-if (h1) {
-    h1.onclick = () => {
-        console.log('Hello World!');
-    }
-}
+createApp(App).mount('#app');
