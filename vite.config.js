@@ -9,10 +9,15 @@ export default defineConfig({
         },
     },
     plugins: [
-        vue(),
         laravel({
             input: ['resources/scss/main.scss', 'resources/ts/index.ts'],
             refresh: true,
+        }),
+        vue({
+            transformAssetUrls: {
+                base: null,
+                includeAbsolute: false,
+            },
         }),
     ],
 });
