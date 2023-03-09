@@ -10,7 +10,7 @@ export default defineConfig({
     },
     plugins: [
         laravel({
-            input: ['resources/scss/main.scss', 'resources/ts/index.tsx'],
+            input: ['resources/scss/main.scss', 'resources/ts/index.ts'],
             refresh: true,
         }),
         vue({

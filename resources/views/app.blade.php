@@ -8,6 +8,6 @@
 
 @section('content')
 
-    <div id="app"></div>
+    <div id="root"></div>
 
 @endsection
